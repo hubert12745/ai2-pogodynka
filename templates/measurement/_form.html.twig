@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+{{ form_errors(form) }}
+
+<div class="mb-3">
+    {{ form_label(form.location) }}
+    {{ form_widget(form.location, {'attr': {'class':'form-select'}}) }}
+    <div class="text-danger small">{{ form_errors(form.location) }}</div>
+</div>
+
+<div class="mb-3">
+    {{ form_label(form.date) }}
+    {{ form_widget(form.date, {'attr': {'class':'form-control'}}) }}
+    <div class="text-danger small">{{ form_errors(form.date) }}</div>
+</div>
+
+<div class="mb-3">
+    {{ form_label(form.celsius) }}
+    {{ form_widget(form.celsius, {'attr': {'class':'form-control'}}) }}
+    <div class="text-danger small">{{ form_errors(form.celsius) }}</div>
+</div>
+
+<button class="btn btn-primary">{{ button_label|default('Zapisz') }}</button>
+{{ form_end(form) }}

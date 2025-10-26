@@ -1,0 +1,9 @@
+App\Entity\Measurement:
+    properties:
+        location:
+            - NotNull: { groups: [new, edit] }
+        date:
+            - NotNull: { groups: [new, edit] }
+        celsius:
+            - NotNull: { groups: [new, edit] }
+            - Range: { min: -80, max: 60, groups: [new, edit] }
