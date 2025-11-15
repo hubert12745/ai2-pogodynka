@@ -23,6 +23,8 @@ security:
             logout:
                 path: app_logout
                 target: /login
+            login_throttling:
+                max_attempts: 2
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
